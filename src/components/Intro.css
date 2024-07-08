@@ -1,0 +1,190 @@
+/* Intro.css */
+
+.intro {
+  background-image: url("https://wallpaperaccess.com/full/2109972.jpg");
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  color: rgb(9, 2, 51);
+  width: 100%;
+  height: 600px;
+  padding: 12rem 1rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.intro::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(5, 1, 34, 0.308);
+  z-index: 0;
+}
+
+.first {
+  margin-bottom: 15px;
+  position: relative;
+  z-index: 1;
+  color: rgb(194, 215, 218);
+  font-size: 40px;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.first:hover {
+  transform: scale(1.05); /* Slightly increase size on hover */
+}
+
+.second {
+  font-size: 2rem; /* Default font size */
+  z-index: 1;
+  color: #e23832; 
+  opacity: 0;
+  animation: fadeIn 1.9s forwards, slideIn 1s ease-out forwards;
+}
+
+.brand-text {
+  font-size: 40px; /* Responsive font size for the brand text */
+  color: #e23832; /* Example color */
+  position: relative;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(90px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Media Queries for Responsive Design */
+
+@media (max-width: 1200px) {
+  .intro {
+    padding: 10rem 1rem;
+    height: 500px;
+  }
+
+  .first {
+    font-size: 35px;
+  }
+}
+
+@media (max-width: 992px) {
+  .intro {
+    padding: 8rem 1rem;
+    height: 400px;
+  }
+
+  .first {
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .intro {
+    padding: 6rem 1rem;
+    height: 500px;
+  }
+
+  .first {
+    font-size: 25px;
+  }
+
+  .second {
+    font-size: 1.5rem; /* Adjust font size for smaller screens */
+  }
+}
+
+@media (max-width: 576px) {
+  .intro {
+    padding: 4rem 1rem;
+    height: 500px;
+  }
+
+  .first {
+    font-size: 20px;
+    padding-top: 300px; /* Adjust position of first heading */
+  }
+
+  .second {
+    font-size: 1.2rem; /* Further adjust font size for extra small screens */
+    padding-bottom: 200px; /* Adjust position of second heading */
+  }
+}
+
+@media (max-width: 368px) {
+  .intro {
+    padding: 2rem 1rem;
+    height: 500px;
+  }
+
+  .first {
+    font-size: 18px;
+    padding-top: 250px; /* Adjust position of first heading */
+  }
+}
+
+/* Button styling */
+.intro-content {
+  position: relative; /* Ensure relative positioning for absolute elements */
+}
+
+.intro-content .btn-read-more {
+  position: absolute;
+  top: 10rem; /* Adjust top position as needed */
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1; /* Ensure it's above other content */
+  width: 200px; /* Adjust width as needed */
+}
+
+@media (max-width: 576px) {
+  .intro-content .btn-read-more {
+    width: 150px; /* Adjust width for smaller screens */
+    top: 28rem; /* Adjust top position for smaller screens */
+  }
+}
+
+/* WhatsApp Icon as Button */
+.whatsapp-link {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000; /* Ensure it's above other content */
+}
+
+.whatsapp-link:hover {
+  transform: scale(1.1); /* Optional: Scale up on hover */
+}
+
+.whatsapp-icon {
+  width: 60px; /* Adjust icon size as needed */
+  height: 60px;
+  background-color: #25D366; /* WhatsApp green */
+  border-radius: 50%; /* Make it round */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Example shadow */
+}
+
+.whatsapp-icon svg {
+  width: 40px; /* Adjust icon size */
+  height: 40px;
+  fill: white; /* Icon color */
+}

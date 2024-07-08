@@ -1,0 +1,26 @@
+.text-reset{
+    text-decoration: none;
+}.contact-section {
+   
+    padding: 20px;
+    width: 100%;
+  }
+  
+  @media (min-width: 768px) {
+    .contact-section {
+      flex-direction: row;
+      justify-content: space-around;
+    }
+  }
+  
+  .col-md-2, .col-lg-2, .col-xl-2 {
+    flex: 1;
+    margin: 10px;
+    max-width: 100%;
+  }
+  
+  .text-reset {
+    text-decoration: none;
+    color: inherit;
+  }
+  
