@@ -37,7 +37,7 @@ function Header() {
         <Container>
           <Navbar.Brand href="#intro" className="brand-container">
             <img
-              src="'https://ex1.in/assets/images/logo/exlogo.png'"
+              src='https://ex1.in/assets/images/logo/exlogo.png'
               width="50"
               height="70"
               className="d-inline-block align-top"
